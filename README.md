@@ -1,25 +1,66 @@
 # ST-SHAP
 Code and data for key residue prediction in enzymes 
-1. Create 'Data' and 'Result' folders, parallel to the 'Code' folder.
+## 1. Project Structure
 
-project_root/  
-├── Code/  
+Before running the code, please set up the following folder structure in your project root directory:
+```
+project_root/
+├── Code/
 ├── Data/
-|     └──1ast_73393 
-|             ├──1ast_73393_c.nc
-|             ├──1ast_c.nc
-|             └──out.pdb
-└── Result/  
+│ ├── 1ast_73393/1ast_73393_c.nc
+│ ├── 1ast_73393/1ast_c.nc
+│ └── 1ast_73393/out.pdb
+└── Result/
+```
 
-3. ## Data Download
+---
 
-Due to file size limitations, the full dataset is hosted externally:
-- [Zenodo archive (with DOI)](https://zenodo.org/records/15682888)
+## 2. Data Download
 
-4. Then run the code using the following command:
+Due to file size limitations on GitHub, the full dataset is hosted externally:
 
-     conda env create -f st-shap_py37.yml
-     conda activate st-shap_py37
-     python Code/main_st-shap_multi_100_test.py
+📦 **Download here**: [Zenodo archive (with DOI)](https://zenodo.org/records/15682888)
 
-5. View detailed results in 'Data\results_st-shap_100_test' and check statistical summaries in the 'Result' folder.
+After downloading, place the files into the `Data/` directory following the structure above.
+
+---
+
+## 3. Environment Setup
+
+Create and activate the required conda environment:
+
+```bash
+conda env create -f st-shap_py37.yml
+conda activate st-shap_py37
+```
+
+---
+
+## 4. Run the Code
+
+Run the main script with:
+
+```bash
+python Code/main_st-shap_multi_100_test.py
+```
+---
+
+## 5. Results
+
+Detailed prediction results will be saved in:
+
+```
+Data/results_st-shap_100_test/
+```
+
+Statistical summaries will be stored in:
+
+```
+Result/
+```
+
+---
+
+## 6. Citation
+
+If you use this code or dataset in your research, please cite the Zenodo DOI or the corresponding paper.
